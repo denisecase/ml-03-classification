@@ -3,78 +3,87 @@
 Use this page to record terms and ideas that help you understand
 professional analytics projects.
 
-This project is not only about EDA. It is also a chance to practice
-how professional projects are organized, reused, documented, and verified.
+This project covers classification: building and evaluating models
+that predict a category from input features.
 
 Pro-tip: Expand the VS Code **Outline** view (below the navigator on the right)
 to see this file organization at-a-glance.
 
-## Project Organization
+## Training and Evaluation
 
-### source code
+### training set
 
-Source code are instructions that tell the computer what to do.
-In a Python project, source code lives in files ending with `.py`.
+The training set is the portion of data used to fit the model.
+The model sees these examples and adjusts its internal parameters to minimize error.
 
-### module
+### test set
 
-A module is one Python file that contains related code.
-A module may include constants, functions, imports, and a `main()` function.
-A project may have many modules working together.
-Being able to organize project code into modules, and reusable functions is a valuable skill.
+The test set is the portion of data held back from training
+and used only to evaluate the model on unseen examples.
+A good test score suggests the model generalizes beyond the training data.
 
-### package
+### train-test split
 
-A package is a folder of related Python modules.
-A package usually includes an `__init__.py` file
-(it can be empty or just a docstring comment).
-The init file allows code in that folder to be
-imported and reused across a project.
+A train-test split divides the dataset into a training portion and a test portion.
+A common split is 80% training and 20% test.
 
-### notebook
+### overfitting
 
-A notebook is an interactive file used to combine
-code, output, notes, and narrative.
-Notebooks are useful for exploration, experiments,
-and explaining analysis step by step.
+Overfitting happens when a model learns the training data too closely
+and performs poorly on new, unseen data.
+A large gap between training accuracy and test accuracy is a sign of overfitting.
 
-## Reuse and Workflow
+### accuracy
 
-### reusable function
+Accuracy is the fraction of predictions that are correct.
+It is a useful metric when classes are roughly balanced
+but can be misleading when one class is much more common than others.
 
-A reusable function is a named block of code that performs
-one clear task and can be called more than once.
-Good functions make projects easier to read, test, debug, and modify.
+### confusion matrix
 
-### dependency
+A confusion matrix shows how often a classifier predicted each class
+compared to the true class.
+Each row represents the true class; each column represents the predicted class.
+Off-diagonal entries are misclassifications.
 
-A dependency is an external package or tool that a project
-needs in order to run.
-Dependencies are listed in `pyproject.toml`
-and the environment can be easily recreated using `uv`.
+### precision
 
-### workflow
+Precision is the fraction of positive predictions that were actually correct.
+High precision means the model rarely predicts a class when it should not.
 
-A workflow is an ordered process for completing work.
-In a project, a workflow might include running code,
-checking results, making changes, testing again,
-and saving progress with Git.
+### recall
 
-## Data and Outputs
+Recall is the fraction of actual positives that the model correctly identified.
+High recall means the model rarely misses a true positive.
 
-### raw data
+### F1 score
 
-Raw data is the original input data used by the project.
-It should usually be kept unchanged so the analysis
-can be repeated from the original source.
+The F1 score is the harmonic mean of precision and recall.
+It balances both concerns and is useful when false positives and false negatives
+both carry real cost.
 
-### processed data
+### classification report
 
-Processed data is data that has been
-cleaned, filtered, transformed, summarized, or prepared for later use.
+A classification report shows precision, recall, and F1 score
+for each class in the target.
+It gives a fuller picture of model performance than accuracy alone.
 
-### artifact
+## Classification Models
 
-An artifact is a file created by running a project.
-Examples include logs, charts, reports, exported data files,
-generated databases, and documentation output.
+### decision tree
+
+A decision tree is a classifier that makes predictions by asking a sequence
+of yes/no questions about feature values.
+It is easy to interpret but can overfit if grown too deep.
+
+### logistic regression
+
+Logistic regression is a linear classifier that estimates the probability
+that an input belongs to each class.
+Despite the name, it is a classification model, not a regression model.
+
+### k-nearest neighbors (k-NN)
+
+k-NN is a classifier that predicts the class of a new point
+by finding the k most similar training examples and taking a majority vote.
+It is simple but can be slow on large datasets.
