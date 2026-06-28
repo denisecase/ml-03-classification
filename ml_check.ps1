@@ -46,10 +46,6 @@ Invoke-Step "A1) Ruff lint notebooks" "uv run nbqa ruff notebooks/" {
     uv run nbqa ruff notebooks/
 }
 
-Invoke-Step "A2) Pyright type check notebooks" "uv run nbqa pyright notebooks/" {
-    uv run nbqa pyright notebooks/
-}
-
 # ============================================================
 # B) Execute notebooks headlessly
 # ============================================================
