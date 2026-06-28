@@ -759,7 +759,7 @@ wheels = [
 ]
 
 [[package]]
-name = "ml-03-regression"
+name = "ml-03-classification"
 version = "0.1.0"
 source = { editable = "." }
 dependencies = [

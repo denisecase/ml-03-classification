@@ -10,7 +10,7 @@
 # ============================================================
 
 [project]
-name = "ml-03-regression" # CUSTOM: Package distribution name (use lowercase and dashes).
+name = "ml-03-classification" # CUSTOM: Package distribution name (use lowercase and dashes).
 readme = "README.md"
 requires-python = ">=3.14"
 version = "0.1.0"

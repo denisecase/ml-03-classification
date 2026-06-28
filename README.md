@@ -1,4 +1,4 @@
-# ml-03-regression
+# ml-03-classification
 
 [![Workflow Guide](https://img.shields.io/badge/Pro--Guide-pro--analytics--02-green)](https://denisecase.github.io/pro-analytics-02/workflow-b-apply-example-project/)
 [![Python 3.14](https://img.shields.io/badge/python-3.14%2B-blue?logo=python)](./pyproject.toml)
@@ -83,9 +83,9 @@ open a machine terminal in your `Repos` folder:
 
 ```shell
 # Replace username with YOUR GitHub username.
-git clone https://github.com/username/ml-03-regression
+git clone https://github.com/username/ml-03-classification
 
-cd ml-03-regression
+cd ml-03-classification
 code .
 ```
 
@@ -133,7 +133,7 @@ git push -u origin main
 - Use `CTRL+f` to find (and replace) text within a file.
 - You do not need to add to or modify `tests/`. They are provided for example only.
 - Many files are silent helpers. Explore as you like, but nothing is required.
-- You do NOT not to understand everything; understanding builds naturally over time.
+- You do NOT need to understand everything; understanding builds naturally over time.
 
 ## Troubleshooting >>>
 

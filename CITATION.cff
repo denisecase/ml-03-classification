@@ -11,7 +11,7 @@
 cff-version: "1.2.0"
 type: software
 
-title: "ml-03-regression"
+title: "ml-03-classification"
 version: "0.1.0"
 date-released: "2026-06-16"
 
@@ -21,18 +21,21 @@ authors:
     orcid: "https://orcid.org/0000-0001-6165-7389"
     affiliation: "Northwest Missouri State University, School of Computer Science and Information Systems, Maryville, MO, USA"
 
-repository-code: "https://github.com/denisecase/ml-03-regression"
-url: "https://github.com/denisecase/ml-03-regression"
+repository-code: "https://github.com/denisecase/ml-03-classification"
+url: "https://github.com/denisecase/ml-03-classification"
 license: MIT
 
 abstract: >
   Machine learning project.
-  Learn to characterize machine learning problems.
+  Learn to build and evaluate classification models,
+  interpret confusion matrices and classification reports,
+  and select a classifier based on the problem and data.
 
 keywords:
   - data analytics
   - notebooks
   - machine learning
+  - classification
   - computer-science-education
   - data-analytics-education
   - professional-python
@@ -44,6 +47,7 @@ keywords:
   - python
   - jupyter
   - pandas
+  - scikit-learn
   - git
   - github
   - open-source
